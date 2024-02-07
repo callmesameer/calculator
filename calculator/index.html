@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+<div class = "container">
+    <div class = "calc-vj ">
+      <textarea type="text" id = "vj" placeholder="0"></textarea>
+        <button value="AC" onclick= "vj.value = ''">C</button>
+        <button value="DEL" onclick= "vj.value = vj.value.toString().slice(0,-1);">DEL</button>
+        <button></button>
+        <button value="+" onclick= "vj.value += '+'">+</button>
+        <button value="7" onclick= "vj.value += '7'">7</button>
+        <button value="8" onclick= "vj.value += '8'">8</button>
+        <button value="9" onclick= "vj.value += '9'">9</button>
+        <button value="-" onclick= "vj.value += '-'">-</button>
+        <button value="4" onclick= "vj.value += '4'">4</button>
+        <button value="5" onclick= "vj.value += '5'">5</button>
+        <button value="6" onclick= "vj.value += '6'">6</button>
+        <button value="*" onclick= "vj.value += '*'">*</button>
+        <button value="1" onclick= "vj.value += '1'">1</button>
+        <button value="2" onclick= "vj.value += '2'">2</button>
+        <button value="3" onclick= "vj.value += '3'">3</button>
+        <button value="/" onclick= "vj.value += '/'">/</button>
+        <button value="00" onclick= "vj.value += '00'">00</button>
+        <button value="0" onclick= "vj.value += '0'">0</button>
+        <button value="." onclick= "vj.value += '.'">.</button>
+        <button value="=" onclick= "myfun()">=</button>
+    </div>
+</div>
+<script>
+    function myfun(){
+        let solution=document.getElementById("vj").value;
+        let sol=eval(solution);
+        document.getElementById("vj").value = sol;
+    }
+</script>
+</body>
+</html>
